@@ -1,0 +1,37 @@
+h1 {
+  color: black;
+  text-align: center;
+  font-weight: bold; 
+  font-size: 40px;
+  margin: 40px;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+#bg1 {
+    background-color: beige;
+}
+
+#bg2 {
+    background-color: coral;
+}
+
+#bg3 {
+    background-color: grey;
+}
+
+#img1 {
+    background-image: url(./img1.jpg);
+    
+}
+
+#img2 {
+    background-image: url(./img2.jpg);
+}
+
+#img3 {
+    background-image: url(./img3.jpg);
+}

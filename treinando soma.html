@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de soma</title>
+</head>
+<style>
+    body {
+        background-color: lightgrey;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 18pt;
+    }
+</style>
+
+<body>
+
+    <p class="soma">Vamos somar os números:</p>
+    <input type="number" name="n1" id="n1"> + <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" id="somar">
+
+    <script>  
+        var bt = document.querySelector("#somar");
+        bt.addEventListener("click", somar)
+        function somar() {
+            var pegaN1 = document.querySelector("input#n1");
+            var pegaN2 = document.querySelector("input#n2");
+            var n1Int = Number(pegaN1.value)
+            var n2Int = Number(pegaN2.value)
+            res = n1Int + n2Int;
+            window.alert(`A soma entre ${n1Int} e ${n2Int} é ${res}`)
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando Javascript</title>
+    <style>
+        body{
+            background-color: lightgrey;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18pt;
+        }
+
+        .botao{
+            background-color: purple;
+            font: normal 18pt verdana;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 10px;            
+        }
+    </style>
+</head>
+<body>
+    <p>Este é o paragrafo 1</p>
+    <div class="botao">Não clique!</div>
+    <br><br><br><br><br>
+    <p class="soma">Vamos somar os números: </p>
+    <input type="number" name="n1" id="n1"> + 
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" id="somar">
+    <script>
+        var c = document.querySelector("div.botao");
+        var bt = document.querySelector("#somar");
+
+        c.addEventListener("click", clicar);
+        c.addEventListener("mouseenter", mouseEntra);
+        c.addEventListener("mouseout", mouseSai);
+        bt.addEventListener("click", somar);
+
+        function somar(){
+            var pegaN1 = document.querySelector("input#n1");
+            var pegaN2 = document.querySelector("input#n2");
+            var n1Int = Number(pegaN1.value)
+            var n2Int = Number(pegaN2.value)
+            res = n1Int + n2Int;
+            window.alert(`A soma entre ${n1Int} e ${n2Int} é ${res}`)
+        }
+
+        function clicar(){
+            c.innerHTML = "Você clicou!! :(" 
+        }
+        function mouseEntra(){
+            c.innerHTML = "Estou de olho..."
+        }
+        function mouseSai(){
+            c.innerHTML = "Não clique!"
+        }
+
+    </script>
+    
+</body>
+</html>

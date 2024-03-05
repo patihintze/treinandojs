@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Localização:</h1>
+    <p>Informe o país que você mora atualmente: </p>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="clicar" onclick=clicar()>
+    <div id="res"></div>
+
+    <script>
+        
+        function clicar() {
+            var paiss = document.querySelector("input#pais")
+
+            if (paiss.value == "Brasil") {
+                res.innerHTML = '<p>Você é brasileiro!</p>'
+            }else {
+                res.innerHTML = '<p>Você é estrangeiro!</p>'
+            }   
+        
+            
+        }
+    </script>
+    
+</body>
+</html>
